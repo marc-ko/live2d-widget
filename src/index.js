@@ -43,14 +43,12 @@ function loadWidget(config) {
                 }
             }
         }
-        const text = `欢迎阅读<span>「${document.title.split(" - ")[0]}」</span>`;
+        const text = `咦！你睇緊<span>「${document.title.split(" - ")[0]}」</span>`;
         let from;
         if (document.referrer !== "") {
             const referrer = new URL(document.referrer),
                 domain = referrer.hostname.split(".")[1];
             const domains = {
-                "baidu": "百度",
-                "so": "360搜索",
                 "google": "谷歌搜索"
             };
             if (location.hostname === referrer.hostname) return text;
